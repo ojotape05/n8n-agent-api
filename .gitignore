@@ -3,7 +3,6 @@ node_modules/
 
 # Environment variables
 .env
-docker-compose.yml
 
 # Logs
 npm-debug.log*
