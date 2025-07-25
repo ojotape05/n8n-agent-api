@@ -107,7 +107,7 @@ async function editarAluno(req, res) {
         return res.status(200).json({
             tool: 'editar-aluno',
             status: 'sucesso',
-            message: `Aluno ${nome || alunoData.nome} atualizado com sucesso.\n\nmatricula: ${docId}\ncpf: ${alunoData.cpf}\nnome: ${nome || alunoData.nome}\nemail: ${email || alunoData.email}\ncursos: ${cursos || atualizacoes.cursos}`,
+            message: `Aluno ${nome || alunoData.nome} atualizado com sucesso.\n\nmatricula: ${docId}\ncpf: ${alunoData.cpf}\nnome: ${nome || alunoData.nome}\nemail: ${email || alunoData.email}\ncursos: ${cursos || alunoData.cursos}`,
             dados: {
                 matricula: docId,
                 cpf,
@@ -206,7 +206,7 @@ async function deletarAluno(req, res) {
         return res.status(200).json({
             tool: "deletar-aluno",
             status: "sucesso",
-            message: `Aluno ${docToDelete.nome}, com CPF ${cpf}, deletado com sucesso.`
+            message: `Aluno ${docToDelete.data().nome}, com CPF ${cpf}, deletado com sucesso.`
         });
 
     } catch (error) {
